@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.statistics{
+	width: 100%;
+	background: #ffffff;
+	border-spacing: 0px 0;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+tr {
+	text-align: center;
+	height: 30px;
+
+}
+
+th{
+	border-bottom: 1px solid #9eb9d1;	
+	cursor: pointer;
+}
+th:hover {
+	background: aliceblue;
+}
+
+tbody tr:nth-child(2n)
+{
+    background: aliceblue;
+}
+
+.headinfo {
+		background: #ffffff;
+		font-size: 13px;
+		font-style: italic;	
+		font-weight: bold;		
+
+}
+
+.tzLabel{
+	float: left;
+	padding-right: 25px;
+	
+
+}
+
+#tzList {
+		background: transparent;
+		width: 209px;
+		padding: 0px 23px 5px 5px;
+		font-size: 12px;
+		border: 1px solid #c7d0ea;
+		height: 20px;
+}
+
+

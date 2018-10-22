@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.content-item{
+
+	height: 106px;
+	
+	padding-bottom: 10px;
+	
+	padding-top: 10px;
+	
+	margin-top: 2px;
+	
+	margin-left: 2px;
+	
+	margin-right: 2px;
+	
+	background-color: #ffffff;
+
+}
+
+
+.content-item:hover {
+	background-color: aliceblue;
+}
+
+#head-content-insert {
+	height: 30px;
+	text-align: center;
+	line-height: 2.3em;
+	cursor: pointer;
+	background-color: #ffffff;	
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#head-content-insert:hover {
+	background-color: aliceblue;	
+}
+
+
+.box-item {
+	overflow: hidden;
+}
+
+#group-box {
+	width: 280px;
+	float : left;
+	padding-left: 10px;
+	height: 100%;
+}
+
+.add-to-cart {
+	float: left;
+	padding-right: 10px;
+	cursor: pointer;
+	padding-top: 10px;
+	color: #66877b;
+}
+
+
+.goods-img-div {
+	width: 100px;
+	height: 100%;
+	float : left;
+	padding-left: 10px;	
+}
+
+.goods-logo {
+	float : left; 
+	width: 100%;
+	height: 100%;
+}
+
+.goods-name {
+	font-size: 14px;
+
+	font-weight: bold;
+
+	padding-bottom: 2px;
+}
+
+
+
+.goods-count {
+
+}
+
+.goods-price {
+
+}
+
+.goods-delete {
+	width: 23%;
+	cursor: pointer;
+	
+}
+
+.goods-delete:hover {
+	background-color: 
+}
+
+.goods-delete-edit{
+	
+	padding-top: 10px;
+}
+
+.goods-info {
+	float: right;
+	width: 390px;
+	height: 100%;
+	word-wrap: break-word;
+    overflow: hidden;
+	
+}
+
+#goods-id-hidden{
+	display: none;
+	}
+
+.botton-content-navigator {
+	height: 2%;
+	float: inherit;
+	text-align: center;
+	line-height: 3.5em;
+}
+
+.head-content-navigator {
+		height: 37px;
+		float: inherit;
+		text-align: center;
+		line-height: 2.8em;
+}
+
+
+.page-id{
+	padding: 5px;
+	cursor: pointer;
+}
+
+.page-id:hover{
+	background-color: aliceblue;	
+}

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+#headMarket{
+	background : #4a76a8;
+	color: #ffffff;
+	font-size: 15px;
+	overflow: hidden;
+	height: 70px;
+	width: 800px;
+	margin: auto;		
+}
+
+#logIn {
+	background : #ffffff;
+	font-family: 'Tahoma';
+	overflow: hidden;
+	margin: auto;
+	width: 800px;
+	text-align: right;
+	font-size: 13px;
+}
+
+
+.headMarketText {
+	padding-top: 25px;
+}
+
+#exit {
+	float : right;
+	padding-right: 15px;
+}
+
+#marketTitle{
+	float: left;
+	padding-left: 15px;
+	cursor: pointer;
+}
+
+#marketCart {
+	float: right;
+	padding-right: 15px;
+	cursor: pointer;
+}
+.head-btn {
+	cursor: pointer;
+}
+
+.content {
+	margin: auto;
+	width: 800px;
+	height: auto;  /* по умолчанию 900px   2520px - 20 записей + навигационное меюн*/ 
+	background: #edeef0;
+	padding-top: 4px;
+}
+
+.bottom-panel {
+	margin: auto;
+	width: 800px;
+	height : 70px;
+	background : #4a76a8;
+}
+
+a{
+	text-decoration : none;
+	list-style: none;
+	font-family: 'Raleway', sans-serif;
+	
+}
+
+.inHead {
+	color : #ffffff;
+	font-family: 'Raleway', sans-serif;
+} 
+
+body{
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+}

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;	
+}
+.div-input-text{
+	width: 100%;
+	height: 40px;
+}
+
+.div-input-submit {
+	width: 100%;
+	height: 40px;
+}
+
+#container {
+	background: #edeef0;
+	width: 450px;
+	height: 500x;
+	margin: 100px auto;	
+	}
+
+#logo {
+	background: #4a76a8;
+	color: #ffffff;
+	height: 50px;	
+	padding-top: 25px;
+	padding-left: 20px;
+}
+
+.div-input {
+	padding: 15px;
+}
+
+.inHead {
+	text-decoration : none;
+	list-style: none;
+	color : #ffffff;
+	font-family: 'Raleway', sans-serif;
+} 
