@@ -715,49 +715,7 @@ public class DataModule {
 			return recordCount;
 		}
 		
-		public static void createSQltoPay () {
-			String sql = "CREATE OR REPLACE FUNCTION public.topay(usrid integer) RETURNS integer AS\r\n" + 
-					"$BODY$ \r\n" + 
-					"DECLARE\r\n" + 
-					"	cartCount Integer;\r\n" + 
-					" BEGIN    \r\n" + 
-					" \r\n" + 
-					" update goods set count = goods.count - data_table.count\r\n" + 
-					"from\r\n" + 
-					"(select unnest(array (SELECT  goods.id FROM   public.cart,  public.goods,  public.category,  public.users\r\n" + 
-					"			WHERE \r\n" + 
-					"			  cart.userid = usrid AND\r\n" + 
-					"			  cart.goodsid = goods.id AND\r\n" + 
-					"			  users.id = cart.userid AND \r\n" + 
-					"			  category.id = goods.categoryid)) as id, \r\n" + 
-					"\r\n" + 
-					"        unnest(array(SELECT  cart.count FROM   public.cart,  public.goods,  public.category,  public.users\r\n" + 
-					"			WHERE \r\n" + 
-					"			  cart.userid = usrid AND\r\n" + 
-					"			  cart.goodsid = goods.id AND\r\n" + 
-					"			  users.id = cart.userid AND \r\n" + 
-					"			  category.id = goods.categoryid)) as count) as data_table\r\n" + 
-					"where goods.id = data_table.id;\r\n" + 
-					"\r\n" + 
-					"insert into statistics\r\n" + 
-					"(username, gname, gcategory, ginfo, ccount, gprice,  totalsumposition, datetopay)\r\n" + 
-					"SELECT \r\n" + 
-					"  users.email, goods.name as gname, category.name as cName, goods.info as ginfo,\r\n" + 
-					"  cart.count as cCount, goods.price as priceOne, (goods.price * cart.count) as sumItems, (select now() )\r\n" + 
-					"  \r\n" + 
-					"FROM \r\n" + 
-					"  public.cart, public.goods,  public.category, public.users\r\n" + 
-					"WHERE \r\n" + 
-					"  cart.userid = usrid AND cart.goodsid = goods.id AND users.id = cart.userid AND category.id = goods.categoryid;\r\n" + 
-					"\r\n" + 
-					"  cartCount = (select count(*) from cart where userid = usrid); 		\r\n" + 
-					"  return cartCount;\r\n" + 
-					"END; $BODY$\r\n" + 
-					"LANGUAGE plpgsql VOLATILE NOT LEAKPROOF\r\n" + 
-					"COST 100;\r\n" + 
-					"";
-		}
-		
+
 	}
 }
 
