@@ -9,16 +9,10 @@ public enum Season {
 
     Boolean prim;
 
-    Season(Boolean prim, Function<Season, Boolean> getter) {
+    Season (Boolean prim, Function<Season, ? extends Boolean> getter) {
         this.prim = prim;
         this.getter = getter;
     }
-    private final Function<Season, Boolean> getter;
+    private final Function<Season, ? extends Boolean> getter;
 
-    public Boolean getValue(Season data)
-    {
-        return getter.apply(data);
-    }
-
-    public boolean isPrimitive() { return prim; }
 }
