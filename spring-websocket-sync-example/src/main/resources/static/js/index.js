@@ -13,7 +13,7 @@ window.onload = () => {
   request = document.getElementById("request");
   response = document.getElementById("response");
 
-  const appMain = new AppMain();
+  const appMain = new AppMain(`ws://${window.location.host}/myHandler`);
 
   btnConnect.addEventListener("click", appMain.doConnect);
   btnDisconnect.addEventListener("click", appMain.doDisconnect);
@@ -23,15 +23,16 @@ window.onload = () => {
 class AppMain {
 
   #socketProcessor = null;
-  #url = "ws://localhost:8080/myHandler";
+  #url = null;
 
   #onOpen = () => console.log("Соединение установленно");
   #onclose = (e) => console.log(`Соединение закрыто; eventCode: ${e.code}; eventMessage: ${e.reason}`);
   #onMessage = (data) => response.innerHTML += (`<div>response: ${data}</div>`);
   #onError = () => console.error(`Произошла ошибка при подключении`);
 
-  constructor()
+  constructor(url)
   {
+    this.#url = url;
     this.#socketProcessor = new WebSocketProcessor(this.#url, this.#onOpen,
                                                    this.#onMessage, this.#onclose, this.#onError)
   }

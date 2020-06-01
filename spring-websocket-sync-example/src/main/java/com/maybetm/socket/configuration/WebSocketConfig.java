@@ -18,7 +18,6 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer
 {
-  @Autowired
   private final MyHandler myHandler;
 
   @Autowired

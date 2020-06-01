@@ -32,7 +32,7 @@ public class MyHandler extends TextWebSocketHandler
     log.info("handleTextMessage тест; message: {}", message.getPayload());
 
     Thread.sleep(3000);
-    session.sendMessage(new TextMessage(String.format("req; message input; rand: %s", Math.random())));
+    session.sendMessage(new TextMessage(String.format("response; rand number: %s", Math.random())));
   }
 
   @Override
