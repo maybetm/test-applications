@@ -32,6 +32,7 @@ public class WebSocketConfig implements WebSocketConfigurer
     registry
       .addHandler(myHandler, "/myHandler")
       .addInterceptors(new HttpSessionHandshakeInterceptor());
+
   }
 
   @Bean
